@@ -1,0 +1,54 @@
+Zadanie 1
+Przygotowanie
+
+    Przygotuj folder pod aplikację.
+    Załóż nowe repozytorium Git na GitHubie i nową bazę danych.
+    Pamiętaj o robieniu backupów bazy danych, (najlepiej co każde ćwiczenie) i tworzeniu commitów (również co każde ćwiczenie).
+    Stwórz plik .gitignore i dodaj do niego wszystkie podstawowe dane: (pliki *.*~, katalog z danymi twojego IDE jeżeli istnieje itp.).
+    Stwórz plik, który będzie służył do łączenia się z bazą danych.
+
+Zadanie 2
+Zadania z wykładowcą
+
+    Podczas zadań z wykładowcą stworzysz szkielet wszystkich programów i klasę User (na podstawie schematu z prezentacji).
+
+Zadanie 3
+Zarządzanie użytkownikami
+
+    Na podstawie klasy User i napisanego szkieletu wypełnij program do zarządzania użytkownikami funkcjami ze scenariusza.
+
+Zadanie 4
+Zarządzanie komunikatami
+
+    Czas na dodanie głównej funkcjonalności do naszej strony – czyli komunikaty.
+    Stwórz w bazie danych tabelę, która będzie przetrzymywała komunikaty.
+    Pamiętaj o stworzeniu relacji między tą tabelą a tabelą użytkowników:
+        Każdy użytkownik może nadać wiele komunikatów, każdy komunikat może mieć tylko jednego nadawcę.
+        Każdy użytkownik może odebrać wiele komunikatów, każdy komunikat może mieć tylko jednego odbiorcę.
+
+    Stwórz klasę Message.
+    Ma ona zawierać co najmniej:
+        id: int,
+        from_id: int,
+        to_id: int,
+        text: string,
+        creation_date: timestamp.
+
+Możesz w dowolny sposób rozwinąć jakąś funkcjonalność.
+
+Zadanie 5
+Klasa Message powinna implementować następujące funkcjonalności
+
+    id można tylko odczytać.
+    Konstruktor nastawiający id na -1, a resztę danych zerujący.
+    Funkcję load_message_by_id() (wzoruj się na klasie User).
+    Funkcję load_all_messages_for_user() (ma wczytać wszystkie komunikaty wysłane do użytkownika).
+
+    Funkcję load_all_messages() (wzoruj się na klasie User).
+    Funkcję save_to_db() (wzoruj się na metodzie save_to_db z klasy User).
+
+Jeżeli widzisz jeszcze jakieś potrzebne funkcje, to możesz je dopisać.
+
+Zadanie 6
+
+Program do obsługi komunikatów wypełnij potrzebnymi funkcjami, takimi jak w scenariuszach.
